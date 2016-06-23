@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<org.jenkinsci.plugins.globalEventsPlugin.GlobalEventsPlugin_-DescriptorImpl plugin="groovy-events-listener-plugin@1.012">
+  <onEventGroovyCode>log.info(&quot;Fired event &apos;${event}&apos;.&quot;)</onEventGroovyCode>
+  <disableSynchronization>false</disableSynchronization>
+  <onPluginStarted>true</onPluginStarted>
+  <onPluginStopped>true</onPluginStopped>
+  <onJobStarted>true</onJobStarted>
+  <onJobCompleted>true</onJobCompleted>
+  <onJobFinalized>true</onJobFinalized>
+  <onJobDeleted>true</onJobDeleted>
+  <scheduleTime>0</scheduleTime>
+  <classPath></classPath>
+</org.jenkinsci.plugins.globalEventsPlugin.GlobalEventsPlugin_-DescriptorImpl>

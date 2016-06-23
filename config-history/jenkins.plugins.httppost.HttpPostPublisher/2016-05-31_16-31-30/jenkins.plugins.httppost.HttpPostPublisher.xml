@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jenkins.plugins.httppost.HttpPostPublisher_-Descriptor plugin="http-post@1.2">
+  <url>https://hooks.slack.com/services/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</url>
+  <headers></headers>
+</jenkins.plugins.httppost.HttpPostPublisher_-Descriptor>

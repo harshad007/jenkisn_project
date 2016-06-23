@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>&#xd;
+</description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.19.0">
+      <projectUrl>https://github.com/harshad007/yamlfiles.git/</projectUrl>
+      <displayName></displayName>
+    </com.coravy.hudson.plugins.github.GithubProjectProperty>
+    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.25">
+      <autoRebuild>false</autoRebuild>
+      <rebuildDisabled>false</rebuildDisabled>
+    </com.sonyericsson.rebuild.RebuildSettings>
+  </properties>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.4.4">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>https://github.com/harshad007/yamlfiles</url>
+        <credentialsId>895ee99c-d38c-4346-aaa7-edcf03c81071</credentialsId>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>*/master</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <submoduleCfg class="list"/>
+    <extensions/>
+  </scm>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.38">
+      <project>xornet_qa</project>
+      <filter>**</filter>
+      <target></target>
+      <excludes></excludes>
+      <selector class="hudson.plugins.copyartifact.StatusBuildSelector">
+        <stable>true</stable>
+      </selector>
+      <doNotFingerprintArtifacts>false</doNotFingerprintArtifacts>
+    </hudson.plugins.copyartifact.CopyArtifact>
+    <hudson.tasks.Shell>
+      <command>#!/bin/bash
+env 
+echo &quot;One&quot;</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers>
+    <org.jvnet.hudson.plugins.groovypostbuild.GroovyPostbuildRecorder plugin="groovy-postbuild@2.3.1">
+      <script plugin="script-security@1.19">
+        <script>
+def addSlack(item)
+{
+      println(&quot;adding slack to: &quot;+ item.name);
+    for (Iterator publishersItr = item.publishersList.iterator(); publishersItr.hasNext();) {
+        def publisher = publishersItr.next();
+        if(publisher instanceof jenkins.plugins.slack.SlackNotifier)
+	      {
+  				publishersItr.remove()
+        	break;
+    	  }
+      }
+
+    item.publishersList.add(new jenkins.plugins.slack.SlackNotifier(teamDomain, token, room,buildServerUrl,null) );
+
+   
+    
+    ps = item.getAllProperties()
+    def f;
+    for(p in ps) {
+	    if(p instanceof jenkins.plugins.slack.SlackNotifier.SlackJobProperty)
+      {
+        
+      		f= p;
+        break;
+      }
+     
+    }
+    if(f!=null)   
+    	item.removeProperty(f)
+    hudson.model.JobProperty pr  = new jenkins.plugins.slack.SlackNotifier.SlackJobProperty(null,null,null,false,false,true,false,false,true,true,false,true,true,false,null);
+    item.addProperty(pr)
+   
+
+}
+def getAllDependencies(item)
+{
+	println(item.name +&quot; dependencies:&quot; + item.getDownstreamProjects())
+  addSlack(item)
+  for(i in  item.getDownstreamProjects())
+  {
+    getAllDependencies(i)
+  }
+}
+
+
+teamDomain = null //your slack team name
+token = null // your slack token for jenkins
+buildServerUrl = null //jenkins build server address
+room = null //slack channel
+ 
+for (item in Hudson.instance.items) {
+
+  
+  
+  if(item.name.equals(&quot;common&quot;)){
+    getAllDependencies(item)
+  }
+}</script>
+        <sandbox>true</sandbox>
+      </script>
+      <behavior>0</behavior>
+      <runForMatrixParent>false</runForMatrixParent>
+    </org.jvnet.hudson.plugins.groovypostbuild.GroovyPostbuildRecorder>
+  </publishers>
+  <buildWrappers/>
+</project>

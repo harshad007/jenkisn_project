@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<org.jenkinsci.plugins.StashBranchParameter.StashBranchParameterDefinition_-StashBranchParameterDescriptorImpl plugin="StashBranchParameter@0.2.0">
+  <username></username>
+  <password>4laaWcUcVQsH34Lo1HCjCw==</password>
+  <stashApiUrl></stashApiUrl>
+</org.jenkinsci.plugins.StashBranchParameter.StashBranchParameterDefinition_-StashBranchParameterDescriptorImpl>

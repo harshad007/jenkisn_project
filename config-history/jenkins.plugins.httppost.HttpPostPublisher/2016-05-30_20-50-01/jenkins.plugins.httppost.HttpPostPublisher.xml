@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jenkins.plugins.httppost.HttpPostPublisher_-Descriptor plugin="http-post@1.2">
+  <url>curl -X POST --data-urlencode &apos;payload={&quot;channel&quot;: &quot;#build-info&quot;, &quot;username&quot;: &quot;webhookbot&quot;, &quot;text&quot;: &quot;This is posted to #build-info and comes from a bot named webhookbot.&quot;, &quot;icon_emoji&quot;: &quot;:ghost:&quot;}&apos; https://hooks.slack.com/services/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</url>
+  <headers></headers>
+</jenkins.plugins.httppost.HttpPostPublisher_-Descriptor>

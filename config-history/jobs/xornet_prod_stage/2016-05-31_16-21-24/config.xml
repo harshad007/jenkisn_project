@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>&#xd;
+</description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.19.0">
+      <projectUrl>https://github.com/harshad007/yamlfiles.git/</projectUrl>
+      <displayName></displayName>
+    </com.coravy.hudson.plugins.github.GithubProjectProperty>
+    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.25">
+      <autoRebuild>false</autoRebuild>
+      <rebuildDisabled>false</rebuildDisabled>
+    </com.sonyericsson.rebuild.RebuildSettings>
+  </properties>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.4.4">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>https://github.com/harshad007/yamlfiles</url>
+        <credentialsId>895ee99c-d38c-4346-aaa7-edcf03c81071</credentialsId>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>*/master</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <submoduleCfg class="list"/>
+    <extensions/>
+  </scm>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.38">
+      <project>xornet_qa</project>
+      <filter>**</filter>
+      <target></target>
+      <excludes></excludes>
+      <selector class="hudson.plugins.copyartifact.StatusBuildSelector">
+        <stable>true</stable>
+      </selector>
+      <doNotFingerprintArtifacts>false</doNotFingerprintArtifacts>
+    </hudson.plugins.copyartifact.CopyArtifact>
+    <hudson.tasks.Shell>
+      <command>#!/bin/bash
+env 
+echo &quot;One&quot;</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers>
+    <org.jvnet.hudson.plugins.groovypostbuild.GroovyPostbuildRecorder plugin="groovy-postbuild@2.3.1">
+      <script plugin="script-security@1.19">
+        <script>// The webhook URL from the integration you set up
+let webhookUrl = &quot;https://hooks.slack.com/services/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&quot;
+
+SlackNotification webhookUrl (fun p -&gt;
+    {p with
+        Text = &quot;My Slack Notification!\n&lt;https://google.com|Click Here&gt;!&quot;
+        Channel = &quot;@build-info&quot;
+        Icon_Emoji = &quot;:ghost:&quot;
+        Attachments = [| 
+            {SlackNotificationAttachmentDefaults with
+                Fallback = &quot;Attachment Plain&quot;
+                Text = &quot;Attachment Rich&quot;
+                Pretext = &quot;Attachment Pretext&quot;
+                Color = &quot;danger&quot;
+                Fields = [|
+                    {SlackNotificationAttachmentFieldDefaults with
+                        Title = &quot;Field Title 1&quot;
+                        Value = &quot;Field Value 2&quot;}
+                    {SlackNotificationAttachmentFieldDefaults with
+                        Title = &quot;Field Title 1&quot;
+                        Value = &quot;Field Value 2&quot;}|]
+            }
+            {SlackNotificationAttachmentDefaults with
+                Fallback = &quot;Attachment 2 Plain&quot;
+                Text = &quot;Attachment 2 Rich&quot;
+                Pretext = &quot;Attachment 2 Pretext&quot;
+                Color = &quot;#FFCCDD&quot;
+            }|]
+    })
+|&gt; printfn &quot;Result: %s&quot;</script>
+        <sandbox>false</sandbox>
+      </script>
+      <behavior>0</behavior>
+      <runForMatrixParent>false</runForMatrixParent>
+    </org.jvnet.hudson.plugins.groovypostbuild.GroovyPostbuildRecorder>
+  </publishers>
+  <buildWrappers/>
+</project>

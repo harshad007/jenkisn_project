@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>&#xd;
+</description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.19.0">
+      <projectUrl>https://github.com/harshad007/yamlfiles.git/</projectUrl>
+      <displayName></displayName>
+    </com.coravy.hudson.plugins.github.GithubProjectProperty>
+    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.25">
+      <autoRebuild>false</autoRebuild>
+      <rebuildDisabled>false</rebuildDisabled>
+    </com.sonyericsson.rebuild.RebuildSettings>
+  </properties>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.4.4">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>https://github.com/harshad007/yamlfiles</url>
+        <credentialsId>895ee99c-d38c-4346-aaa7-edcf03c81071</credentialsId>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>*/master</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <submoduleCfg class="list"/>
+    <extensions/>
+  </scm>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.38">
+      <project>xornet_qa</project>
+      <filter>**</filter>
+      <target></target>
+      <excludes></excludes>
+      <selector class="hudson.plugins.copyartifact.StatusBuildSelector">
+        <stable>true</stable>
+      </selector>
+      <doNotFingerprintArtifacts>false</doNotFingerprintArtifacts>
+    </hudson.plugins.copyartifact.CopyArtifact>
+    <hudson.tasks.Shell>
+      <command>#!/bin/bash
+env 
+echo &quot;One&quot;</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers>
+    <org.jenkinsci.plugins.postbuildscript.PostBuildScript plugin="postbuildscript@0.17">
+      <groovyScriptContentList>
+        <org.jenkinsci.plugins.postbuildscript.GroovyScriptContent>
+          <content>def static getUserLogin() {
+    def url = &apos;https://hooks.slack.com/services/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&quot;&apos;
+
+    def heads = &quot;-H &apos;Content-Type: application/json&apos; -H &apos;Accept: text/plain&apos; &quot;
+    def insecure = &apos;-k&apos;
+    def verbose = &apos;-v&apos;
+    return ex( [ url, heads, insecure, verbose ] )
+}
+
+/**
+ *
+ * @param commands The command + args you want to execute on your shell.
+ * @param _workingDir Optional: You may specify the directory where the command will be executed. Default is user dir.
+ * @return Exit value for the process. 0 = normal termination.
+ */
+static ex( List&lt;String&gt; commands {
+    println &quot;Executing command&gt; $commands \n&quot;
+    def process = new ProcessBuilder( addShellPrefix( commands ) )
+            .inheritIO()
+            .start()
+    process.waitFor()
+    return process.exitValue().value
+}
+
+private static addShellPrefix( List&lt;String&gt; commands ) {
+    [ &apos;curl&apos; ] + commands
+}</content>
+        </org.jenkinsci.plugins.postbuildscript.GroovyScriptContent>
+      </groovyScriptContentList>
+      <buildSteps>
+        <hudson.tasks.Shell>
+          <command>curl -X POST --data-urlencode &apos;payload={&quot;channel&quot;: &quot;#build-info&quot;, &quot;username&quot;: &quot;webhookbot&quot;, &quot;text&quot;: &quot;This is posted to #build-info and comes from a bot named webhookbot.&quot;, &quot;icon_emoji&quot;: &quot;:ghost:&quot;}&apos; https://hooks.slack.com/services/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</command>
+        </hudson.tasks.Shell>
+      </buildSteps>
+      <scriptOnlyIfSuccess>true</scriptOnlyIfSuccess>
+      <scriptOnlyIfFailure>false</scriptOnlyIfFailure>
+      <markBuildUnstable>false</markBuildUnstable>
+    </org.jenkinsci.plugins.postbuildscript.PostBuildScript>
+  </publishers>
+  <buildWrappers/>
+</project>

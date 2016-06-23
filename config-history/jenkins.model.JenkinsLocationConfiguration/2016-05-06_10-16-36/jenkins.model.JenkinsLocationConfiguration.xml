@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jenkins.model.JenkinsLocationConfiguration>
+  <jenkinsUrl>http://ec2-52-38-110-52.us-west-2.compute.amazonaws.com:8080/</jenkinsUrl>
+</jenkins.model.JenkinsLocationConfiguration>
