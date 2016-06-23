@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Jenkins-Version: 1.581
+Group-Id: org.jenkins-ci.plugins
+Plugin-Class: org.jenkinsci.plugins.globalEventsPlugin.GlobalEventsPlu
+ gin
+Plugin-Developers: Nick Grealy:nickg:nickgrealy@gmail.com
+Short-Name: groovy-events-listener-plugin
+Compatible-Since-Version: 1.20
+Plugin-Version: 1.012
+Long-Name: Groovy Events Listener Plugin
+Extension-Name: groovy-events-listener-plugin
+Url: https://wiki.jenkins-ci.org/display/JENKINS/Groovy Events Listene
+ r Plugin
+

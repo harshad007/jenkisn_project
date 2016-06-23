@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: Erwin
+Build-Jdk: 1.7.0_75
+Extension-Name: StashBranchParameter
+Implementation-Title: StashBranchParameter
+Implementation-Version: 0.2.0
+Group-Id: org.jenkins-ci.plugins
+Short-Name: StashBranchParameter
+Long-Name: Stash Branch Parameter Plug-In
+Url: http://wiki.jenkins-ci.org/display/JENKINS/stash-branch-parameter
+ s-plugin
+Plugin-Version: 0.2.0
+Hudson-Version: 1.639
+Jenkins-Version: 1.639
+Plugin-Developers: Erwin Oldenkamp:eernie:oldenkamperwin@gmail.com
+

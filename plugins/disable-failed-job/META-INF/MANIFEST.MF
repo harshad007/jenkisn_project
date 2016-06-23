@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: kazu
+Build-Jdk: 1.8.0_05
+Extension-Name: disable-failed-job
+Specification-Title: This Plugin disable Job when Build failed.
+Implementation-Title: disable-failed-job
+Implementation-Version: 1.15
+Group-Id: org.jenkins-ci.plugins
+Short-Name: disable-failed-job
+Long-Name: Disable Failed Job Plugin
+Url: https://wiki.jenkins-ci.org/display/JENKINS/Disable+Failed+Job+Pl
+ ugin
+Plugin-Version: 1.15
+Hudson-Version: 1.605
+Jenkins-Version: 1.605
+Plugin-Developers: w_kazunori:w_kazunori:wakamatsu.kazunori@gmail.com
+

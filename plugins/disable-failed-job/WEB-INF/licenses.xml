@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<l:dependencies xmlns:l='licenses' groupId='org.jenkins-ci.plugins' artifactId='disable-failed-job' version='1.15'><l:dependency name='Disable Failed Job Plugin' groupId='org.jenkins-ci.plugins' artifactId='disable-failed-job' version='1.15' url='https://wiki.jenkins-ci.org/display/JENKINS/Disable+Failed+Job+Plugin'><l:description>This Plugin disable Job when Build failed.</l:description></l:dependency></l:dependencies>
