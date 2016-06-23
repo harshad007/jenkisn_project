@@ -1,0 +1,29 @@
+Started by user [8mha:AAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyBEgZe/dLi1CL9jMSi4ozEFAAD9tttwgAAAA==[0mharshad velapure
+Building in workspace /var/lib/jenkins/workspace/xornet_qa
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/harshad007/yamlfiles # timeout=10
+Fetching upstream changes from https://github.com/harshad007/yamlfiles
+ > git --version # timeout=10
+using .gitcredentials to set credentials
+ > git config --local credential.username harshad007 # timeout=10
+ > git config --local credential.helper store --file=/tmp/git4503917559499896042.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/harshad007/yamlfiles +refs/heads/*:refs/remotes/origin/*
+ > git config --local --remove-section credential # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision fc2400597185800290929431b34f2c611165eef2 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f fc2400597185800290929431b34f2c611165eef2
+ > git rev-list fc2400597185800290929431b34f2c611165eef2 # timeout=10
+[PHP WEB SERVER] Starting server localhost:8000 with document root /var/lib/jenkins/workspace/xornet_qa/ws/index.php...
+[xornet_qa] $ groovy /var/lib/jenkins/workspace/xornet_qa/hudson4002746240175960141.groovy
+Caught: groovy.lang.MissingMethodException: No signature of method: hudson4002746240175960141.$() is applicable for argument types: (hudson4002746240175960141$_run_closure1) values: [hudson4002746240175960141$_run_closure1@5b21409a]
+Possible solutions: is(java.lang.Object), run(), run(), any(), any(groovy.lang.Closure), use([Ljava.lang.Object;)
+groovy.lang.MissingMethodException: No signature of method: hudson4002746240175960141.$() is applicable for argument types: (hudson4002746240175960141$_run_closure1) values: [hudson4002746240175960141$_run_closure1@5b21409a]
+Possible solutions: is(java.lang.Object), run(), run(), any(), any(groovy.lang.Closure), use([Ljava.lang.Object;)
+	at hudson4002746240175960141.run(hudson4002746240175960141.groovy:1)
+Build step 'Execute Groovy script' marked build as failure
+[PHP WEB SERVER] Stopping server...
+Skipped archiving because build is not successful
+Finished: FAILURE

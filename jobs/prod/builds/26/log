@@ -1,0 +1,59 @@
+Started by user [8mha:AAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyBEgZe/dLi1CL9jMSi4ozEFAAD9tttwgAAAA==[0mharshad velapure
+Building in workspace /var/lib/jenkins/workspace/project1_SEC
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/harshad007/yamlfiles # timeout=10
+Fetching upstream changes from https://github.com/harshad007/yamlfiles
+ > git --version # timeout=10
+using .gitcredentials to set credentials
+ > git config --local credential.username harshad007 # timeout=10
+ > git config --local credential.helper store --file=/tmp/git1083384156578250257.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/harshad007/yamlfiles +refs/heads/*:refs/remotes/origin/*
+ > git config --local --remove-section credential # timeout=10
+Seen branch in repository origin/master
+Seen 1 remote branch
+Checking out Revision b0b102359fbfec8a20dc056738631cd17e23f91a (origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f b0b102359fbfec8a20dc056738631cd17e23f91a
+ > git rev-list 275002da0db912bc1e34ede45f3d1d593f91f0dc # timeout=10
+[project1_SEC] $ /bin/sh -xe /tmp/hudson6822961559422541896.sh
++ env
+JENKINS_HOME=/var/lib/jenkins
+GIT_PREVIOUS_SUCCESSFUL_COMMIT=275002da0db912bc1e34ede45f3d1d593f91f0dc
+MAIL=/var/mail/jenkins
+USER=jenkins
+XDG_SEAT=seat0
+SHLVL=1
+NODE_LABELS=master
+HUDSON_URL=http://ec2-52-38-110-52.us-west-2.compute.amazonaws.com:8080/
+GIT_COMMIT=b0b102359fbfec8a20dc056738631cd17e23f91a
+HOME=/var/lib/jenkins
+BUILD_URL=http://ec2-52-38-110-52.us-west-2.compute.amazonaws.com:8080/job/project1_SEC/26/
+JENKINS_SERVER_COOKIE=f644632868a6f8c5
+HUDSON_COOKIE=2d9bb120-fa1f-4f73-9cc3-7a9e5e3d0a37
+WORKSPACE=/var/lib/jenkins/workspace/project1_SEC
+LOGNAME=jenkins
+NODE_NAME=master
+_=/usr/bin/daemon
+EXECUTOR_NUMBER=1
+GIT_BRANCH=origin/master
+TERM=linux
+XDG_SESSION_ID=c1
+BUILD_DISPLAY_NAME=#26
+HUDSON_HOME=/var/lib/jenkins
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+BUILD_ID=26
+XDG_RUNTIME_DIR=/run/user/106
+BUILD_TAG=jenkins-project1_SEC-26
+JENKINS_URL=http://ec2-52-38-110-52.us-west-2.compute.amazonaws.com:8080/
+LANG=en_US.UTF-8
+JOB_URL=http://ec2-52-38-110-52.us-west-2.compute.amazonaws.com:8080/job/project1_SEC/
+GIT_URL=https://github.com/harshad007/yamlfiles
+BUILD_NUMBER=26
+SHELL=/bin/bash
+HUDSON_SERVER_COOKIE=f644632868a6f8c5
+JOB_NAME=project1_SEC
+PWD=/var/lib/jenkins/workspace/project1_SEC
+GIT_PREVIOUS_COMMIT=275002da0db912bc1e34ede45f3d1d593f91f0dc
++ 
+Finished: SUCCESS

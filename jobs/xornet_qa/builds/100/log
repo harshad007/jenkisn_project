@@ -1,0 +1,74 @@
+Started by upstream project "[8mha:AAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgYu/az8JP2U1Nx8fQDFg2bivwAAAA==[0mdemo" build number [8mha:AAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAymEgYe/az8JP2U1Nx8fSNzAE9GXCXBAAAA[0m27
+originally caused by:
+ Started by GitHub push by harshad007
+Building in workspace /var/lib/jenkins/workspace/project1
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/harshad007/yamlfiles # timeout=10
+Cleaning workspace
+ > git rev-parse --verify HEAD # timeout=10
+Resetting working tree
+ > git reset --hard # timeout=10
+ > git clean -fdx # timeout=10
+Fetching upstream changes from https://github.com/harshad007/yamlfiles
+ > git --version # timeout=10
+using .gitcredentials to set credentials
+ > git config --local credential.username harshad007 # timeout=10
+ > git config --local credential.helper store --file=/tmp/git8785933240751058415.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/harshad007/yamlfiles +refs/heads/*:refs/remotes/origin/*
+ > git config --local --remove-section credential # timeout=10
+Seen branch in repository origin/master
+Seen 1 remote branch
+Checking out Revision fa55b500dca0b2a9c185380d0b6a8cbba7e718a7 (origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f fa55b500dca0b2a9c185380d0b6a8cbba7e718a7
+ > git rev-list 33c3976085125e5665152eb9adbb41801331ef3f # timeout=10
+[project1] $ /bin/sh -xe /tmp/hudson3768881255214369359.sh
++ env
+JENKINS_HOME=/var/lib/jenkins
+GIT_PREVIOUS_SUCCESSFUL_COMMIT=33c3976085125e5665152eb9adbb41801331ef3f
+MAIL=/var/mail/jenkins
+USER=jenkins
+Build selector for Copy Artifact=<SpecificBuildSelector plugin="copyartifact@1.38">  <buildNumber>lastSuccessfulBuild</buildNumber></SpecificBuildSelector>
+XDG_SEAT=seat0
+SHLVL=1
+NODE_LABELS=master
+HUDSON_URL=http://ec2-52-38-110-52.us-west-2.compute.amazonaws.com:8080/
+GIT_COMMIT=fa55b500dca0b2a9c185380d0b6a8cbba7e718a7
+HOME=/var/lib/jenkins
+BUILD_URL=http://ec2-52-38-110-52.us-west-2.compute.amazonaws.com:8080/job/project1/100/
+JENKINS_SERVER_COOKIE=f644632868a6f8c5
+HUDSON_COOKIE=fb6c9679-90f9-449d-a0dc-9438a11f9314
+WORKSPACE=/var/lib/jenkins/workspace/project1
+LOGNAME=jenkins
+NODE_NAME=master
+_=/usr/bin/daemon
+EXECUTOR_NUMBER=1
+GIT_BRANCH=origin/master
+TERM=linux
+XDG_SESSION_ID=c1
+BUILD_DISPLAY_NAME=#100
+HUDSON_HOME=/var/lib/jenkins
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+BUILD_ID=100
+XDG_RUNTIME_DIR=/run/user/106
+BUILD_TAG=jenkins-project1-100
+JENKINS_URL=http://ec2-52-38-110-52.us-west-2.compute.amazonaws.com:8080/
+LANG=en_US.UTF-8
+JOB_URL=http://ec2-52-38-110-52.us-west-2.compute.amazonaws.com:8080/job/project1/
+GIT_URL=https://github.com/harshad007/yamlfiles
+BUILD_NUMBER=100
+SHELL=/bin/bash
+HUDSON_SERVER_COOKIE=f644632868a6f8c5
+JOB_NAME=project1
+PWD=/var/lib/jenkins/workspace/project1
+Temp=33c3976085125e5665152eb9adbb41801331ef3f
+GIT_PREVIOUS_COMMIT=33c3976085125e5665152eb9adbb41801331ef3f
++ echo 33c3976085125e5665152eb9adbb41801331ef3f
+33c3976085125e5665152eb9adbb41801331ef3f
++ echo 33c3976085125e5665152eb9adbb41801331ef3f
+33c3976085125e5665152eb9adbb41801331ef3f
++ sh user.sh
+user.sh: 1: user.sh: wh: not found
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

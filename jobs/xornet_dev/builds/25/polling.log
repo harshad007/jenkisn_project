@@ -1,0 +1,14 @@
+Started on May 5, 2016 8:05:51 AM
+Using strategy: Default
+[poll] Last Built Revision: Revision b0b102359fbfec8a20dc056738631cd17e23f91a (refs/remotes/origin/master)
+using .gitcredentials to set credentials
+ > git --version # timeout=10
+ > git init /tmp/hudson8448571052009096599tmp # timeout=10
+ > git config --local credential.username harshad007 # timeout=10
+ > git config --local credential.helper store --file=/tmp/git7919784075777064484.credentials # timeout=10
+ > git -c core.askpass=true ls-remote -h https://github.com/harshad007/yamlfiles # timeout=10
+ > git config --local --remove-section credential # timeout=10
+Found 1 remote heads on https://github.com/harshad007/yamlfiles
+[poll] Latest remote head revision on refs/heads/master is: 9943ab8b88a15b37e02e7a73b808652986b5b1f7
+Done. Took 0.6 sec
+Changes found

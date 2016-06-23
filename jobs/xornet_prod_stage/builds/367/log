@@ -1,0 +1,24 @@
+Started by remote host 54.209.231.248
+Building in workspace /var/lib/jenkins/workspace/xornet_prod_stage
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/harshad007/yamlfiles # timeout=10
+Fetching upstream changes from https://github.com/harshad007/yamlfiles
+ > git --version # timeout=10
+using .gitcredentials to set credentials
+ > git config --local credential.username harshad007 # timeout=10
+ > git config --local credential.helper store --file=/tmp/git4503035464994931249.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/harshad007/yamlfiles +refs/heads/*:refs/remotes/origin/*
+ > git config --local --remove-section credential # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 99ff27e443da102363143dfb0531d462c6eafc07 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 99ff27e443da102363143dfb0531d462c6eafc07
+ > git rev-list 99ff27e443da102363143dfb0531d462c6eafc07 # timeout=10
+[xornet_prod_stage] $ /bin/sh -xe /tmp/hudson4645735854651893235.sh
++ curl -X POST --data-urlencode payload={"channel": "#build-info", "username": "webhookbot", "text": "This is posted to build-info with details", "icon_emoji": ":monkey:"} https://hooks.slack.com/services/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
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   223    0     2  100   221      8    919 --:--:-- --:--:-- --:--:--   920
+okFinished: SUCCESS

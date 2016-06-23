@@ -1,0 +1,83 @@
+Started by user [8mha:AAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyBEgZe/dLi1CL9jMSi4ozEFAAD9tttwgAAAA==[0mharshad velapure
+Building in workspace /var/lib/jenkins/workspace/project1
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/harshad007/yamlfiles # timeout=10
+Cleaning workspace
+ > git rev-parse --verify HEAD # timeout=10
+Resetting working tree
+ > git reset --hard # timeout=10
+ > git clean -fdx # timeout=10
+Fetching upstream changes from https://github.com/harshad007/yamlfiles
+ > git --version # timeout=10
+using .gitcredentials to set credentials
+ > git config --local credential.username harshad007 # timeout=10
+ > git config --local credential.helper store --file=/tmp/git5777666655733943064.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/harshad007/yamlfiles +refs/heads/*:refs/remotes/origin/*
+ > git config --local --remove-section credential # timeout=10
+Seen branch in repository origin/master
+Seen 1 remote branch
+Checking out Revision bca33698bcfaa0c0edae93d322547a3e066cd2cd (origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f bca33698bcfaa0c0edae93d322547a3e066cd2cd
+ > git rev-list bca33698bcfaa0c0edae93d322547a3e066cd2cd # timeout=10
+[project1] $ /bin/sh -xe /tmp/hudson7160086587608655658.sh
++ env
+JENKINS_HOME=/var/lib/jenkins
+GIT_PREVIOUS_SUCCESSFUL_COMMIT=257c54ce30d33f69307a45517c1cda8ec0a22581
+MAIL=/var/mail/jenkins
+USER=jenkins
+XDG_SEAT=seat0
+SHLVL=1
+NODE_LABELS=master
+HUDSON_URL=http://ec2-52-38-110-52.us-west-2.compute.amazonaws.com:8080/
+HOME=/var/lib/jenkins
+BUILD_URL=http://ec2-52-38-110-52.us-west-2.compute.amazonaws.com:8080/job/project1/86/
+JENKINS_SERVER_COOKIE=f644632868a6f8c5
+HUDSON_COOKIE=79e321a9-5ebc-4277-9621-719b4ab8be18
+WORKSPACE=/var/lib/jenkins/workspace/project1
+LOGNAME=jenkins
+NODE_NAME=master
+_=/usr/bin/daemon
+EXECUTOR_NUMBER=0
+GIT_BRANCH=origin/master
+TERM=linux
+XDG_SESSION_ID=c1
+BUILD_DISPLAY_NAME=#86
+HUDSON_HOME=/var/lib/jenkins
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+BUILD_ID=86
+XDG_RUNTIME_DIR=/run/user/106
+BUILD_TAG=jenkins-project1-86
+JENKINS_URL=http://ec2-52-38-110-52.us-west-2.compute.amazonaws.com:8080/
+LANG=en_US.UTF-8
+JOB_URL=http://ec2-52-38-110-52.us-west-2.compute.amazonaws.com:8080/job/project1/
+GIT_URL=https://github.com/harshad007/yamlfiles
+BUILD_NUMBER=86
+SHELL=/bin/bash
+HUDSON_SERVER_COOKIE=f644632868a6f8c5
+JOB_NAME=project1
+PWD=/var/lib/jenkins/workspace/project1
+GIT_PREVIOUS_COMMIT=bca33698bcfaa0c0edae93d322547a3e066cd2cd
++ echo
+
++ echo 257c54ce30d33f69307a45517c1cda8ec0a22581
+257c54ce30d33f69307a45517c1cda8ec0a22581
++ sh user.sh
+user.sh: 1: user.sh: wh: not found
+Build step 'Execute shell' marked build as failure
+Performing Post build task...
+Match found for :Build : True
+Logical operation result is TRUE
+Running script  : git rest --hard HEAD
+git push origin master
+[project1] $ /bin/sh -xe /tmp/hudson249139115997612166.sh
++ git rest --hard HEAD
+git: 'rest' is not a git command. See 'git --help'.
+
+Did you mean this?
+	reset
+POST BUILD TASK : FAILURE
+END OF POST BUILD TASK : 0
+'Disable Failed Job Plugin' Disabled Job
+Finished: FAILURE

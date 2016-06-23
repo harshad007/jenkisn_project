@@ -1,0 +1,63 @@
+Started by user [8mha:AAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyBEgZe/dLi1CL9jMSi4ozEFAAD9tttwgAAAA==[0mharshad velapure
+Building in workspace /var/lib/jenkins/workspace/project1_SEC
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/harshad007/yamlfiles # timeout=10
+Fetching upstream changes from https://github.com/harshad007/yamlfiles
+ > git --version # timeout=10
+using .gitcredentials to set credentials
+ > git config --local credential.username harshad007 # timeout=10
+ > git config --local credential.helper store --file=/tmp/git5303463902407901372.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/harshad007/yamlfiles +refs/heads/*:refs/remotes/origin/*
+ > git config --local --remove-section credential # timeout=10
+Seen branch in repository origin/master
+Seen 1 remote branch
+Checking out Revision 263962416cacaaa90e848f5f13b78cfdaa99f1ed (origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 263962416cacaaa90e848f5f13b78cfdaa99f1ed
+ > git rev-list 263962416cacaaa90e848f5f13b78cfdaa99f1ed # timeout=10
+[project1_SEC] $ /bin/sh -xe /tmp/hudson3779231172403346127.sh
++ env
+JENKINS_HOME=/var/lib/jenkins
+GIT_PREVIOUS_SUCCESSFUL_COMMIT=c0ff1aaa4dc60b6e695b370b18bdbb6577702a65
+MAIL=/var/mail/jenkins
+USER=jenkins
+XDG_SEAT=seat0
+SHLVL=1
+NODE_LABELS=master
+HUDSON_URL=http://ec2-52-38-110-52.us-west-2.compute.amazonaws.com:8080/
+GIT_COMMIT=263962416cacaaa90e848f5f13b78cfdaa99f1ed
+HOME=/var/lib/jenkins
+BUILD_URL=http://ec2-52-38-110-52.us-west-2.compute.amazonaws.com:8080/job/project1_SEC/35/
+JENKINS_SERVER_COOKIE=f644632868a6f8c5
+HUDSON_COOKIE=45ae398e-c0ab-4fbd-a32d-7acfd2a59565
+WORKSPACE=/var/lib/jenkins/workspace/project1_SEC
+LOGNAME=jenkins
+NODE_NAME=master
+_=/usr/bin/daemon
+EXECUTOR_NUMBER=1
+GIT_BRANCH=origin/master
+TERM=linux
+XDG_SESSION_ID=c1
+BUILD_DISPLAY_NAME=#35
+HUDSON_HOME=/var/lib/jenkins
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+BUILD_ID=35
+XDG_RUNTIME_DIR=/run/user/106
+BUILD_TAG=jenkins-project1_SEC-35
+JENKINS_URL=http://ec2-52-38-110-52.us-west-2.compute.amazonaws.com:8080/
+LANG=en_US.UTF-8
+JOB_URL=http://ec2-52-38-110-52.us-west-2.compute.amazonaws.com:8080/job/project1_SEC/
+GIT_URL=https://github.com/harshad007/yamlfiles
+BUILD_NUMBER=35
+SHELL=/bin/bash
+HUDSON_SERVER_COOKIE=f644632868a6f8c5
+JOB_NAME=project1_SEC
+PWD=/var/lib/jenkins/workspace/project1_SEC
+GIT_PREVIOUS_COMMIT=263962416cacaaa90e848f5f13b78cfdaa99f1ed
++ 
++ sh user.sh
+ubuntu   pts/0        2016-05-05 07:14 (115.114.9.131)
+Unable to access upstream artifacts area /var/lib/jenkins/jobs/project1/builds/107/archive. Does source project archive artifacts?
+ERROR: Failed to copy artifacts from project1 with filter: lastSuccessfulBuild
+[8mha:AAAAWB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P08vOT+vOD8nVc8DzHWtSE4tKMnMz/PLL0ldFVf2c+b/lb5MDAwVRQxSaBqcITRIIQMEMIIUFgAAckCEiWAAAAA=[0mFinished: FAILURE

@@ -1,0 +1,55 @@
+Started by user [8mha:AAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyBEgZe/dLi1CL9jMSi4ozEFAAD9tttwgAAAA==[0mharshad velapure
+Building in workspace /var/lib/jenkins/workspace/demo
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/harshad007/yamlfiles # timeout=10
+Fetching upstream changes from https://github.com/harshad007/yamlfiles
+ > git --version # timeout=10
+using .gitcredentials to set credentials
+ > git config --local credential.username harshad007 # timeout=10
+ > git config --local credential.helper store --file=/tmp/git8483644706376406881.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/harshad007/yamlfiles +refs/heads/master:refs/remotes/origin/master
+ > git config --local --remove-section credential # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 497f4721a58778abc26ac19fc9811a038ed8b1d2 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 497f4721a58778abc26ac19fc9811a038ed8b1d2
+ > git rev-list 497f4721a58778abc26ac19fc9811a038ed8b1d2 # timeout=10
+[demo] $ /bin/sh -xe /tmp/hudson1945285159873932166.sh
++ env
+JENKINS_HOME=/var/lib/jenkins
+GIT_PREVIOUS_SUCCESSFUL_COMMIT=497f4721a58778abc26ac19fc9811a038ed8b1d2
+MAIL=/var/mail/jenkins
+USER=jenkins
+SHLVL=1
+NODE_LABELS=master
+GIT_COMMIT=497f4721a58778abc26ac19fc9811a038ed8b1d2
+HOME=/var/lib/jenkins
+JENKINS_SERVER_COOKIE=f644632868a6f8c5
+HUDSON_COOKIE=3f793b9a-20c4-4f98-813b-f22e4cb6f547
+WORKSPACE=/var/lib/jenkins/workspace/demo
+LOGNAME=jenkins
+NODE_NAME=master
+_=/usr/bin/daemon
+EXECUTOR_NUMBER=0
+GIT_BRANCH=origin/master
+TERM=xterm
+XDG_SESSION_ID=1
+BUILD_DISPLAY_NAME=#7
+HUDSON_HOME=/var/lib/jenkins
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+BUILD_ID=7
+XDG_RUNTIME_DIR=/run/user/1000
+BUILD_TAG=jenkins-demo-7
+LANG=en_US.UTF-8
+GIT_URL=https://github.com/harshad007/yamlfiles
+BUILD_NUMBER=7
+SHELL=/bin/bash
+HUDSON_SERVER_COOKIE=f644632868a6f8c5
+JOB_NAME=demo
+PWD=/var/lib/jenkins/workspace/demo
+GIT_PREVIOUS_COMMIT=497f4721a58778abc26ac19fc9811a038ed8b1d2
+Warning: you have no plugins providing access control for builds, so falling back to legacy behavior of permitting any downstream builds to be triggered
+Triggering a new build of [8mha:AAAAmh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyOEgY+/az8JP2Covys1OQSQ30AWn4mLcMAAAA=[0mproject1
+Finished: SUCCESS

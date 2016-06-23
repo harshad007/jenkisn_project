@@ -1,0 +1,24 @@
+Started by user [8mha:AAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyBEgZe/dLi1CL9jMSi4ozEFAAD9tttwgAAAA==[0mharshad velapure
+Building in workspace /var/lib/jenkins/workspace/xornet_prod_stage
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/harshad007/yamlfiles # timeout=10
+Fetching upstream changes from https://github.com/harshad007/yamlfiles
+ > git --version # timeout=10
+using .gitcredentials to set credentials
+ > git config --local credential.username harshad007 # timeout=10
+ > git config --local credential.helper store --file=/tmp/git5358826702694395758.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/harshad007/yamlfiles +refs/heads/*:refs/remotes/origin/*
+ > git config --local --remove-section credential # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 01422b63555cf15503003d925628d91f0c1983fa (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 01422b63555cf15503003d925628d91f0c1983fa
+ > git rev-list 9075d7bda1e6ce7c3df68053c219dd6ccad31d03 # timeout=10
+[xornet_prod_stage] $ groovy /var/lib/jenkins/workspace/xornet_prod_stage/notify.groovy
+Caught: groovy.lang.MissingPropertyException: No such property: build for class: notify
+groovy.lang.MissingPropertyException: No such property: build for class: notify
+	at notify.run(notify.groovy:4)
+Build step 'Execute Groovy script' marked build as failure
+Finished: FAILURE

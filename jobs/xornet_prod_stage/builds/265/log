@@ -1,0 +1,75 @@
+Started by user [8mha:AAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyBEgZe/dLi1CL9jMSi4ozEFAAD9tttwgAAAA==[0mharshad velapure
+Building in workspace /var/lib/jenkins/workspace/xornet_prod_stage
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/harshad007/yamlfiles # timeout=10
+Fetching upstream changes from https://github.com/harshad007/yamlfiles
+ > git --version # timeout=10
+using .gitcredentials to set credentials
+ > git config --local credential.username harshad007 # timeout=10
+ > git config --local credential.helper store --file=/tmp/git565012496563525256.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/harshad007/yamlfiles +refs/heads/*:refs/remotes/origin/*
+ > git config --local --remove-section credential # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision f141118d7cc497f84e51ad5129507e0be5d41667 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f f141118d7cc497f84e51ad5129507e0be5d41667
+ > git rev-list f141118d7cc497f84e51ad5129507e0be5d41667 # timeout=10
+Copied 117 artifacts from "[8mha:AAAAkB+LCAAAAAAAAP9b85aBtbiIQSajNKU4P08vOT+vOD8nVc+jsiC1KCczL9svvyTVzHb1RttJBUeZGJg8GdhyUvPSSzJ8GJhLi3JKGIR8shLLEvVzEvPS9YNLijLz0q0rihik0IxzhtAgwxgggJGJgaGiAMjgLGHg18/KT9KvyC/KSy2JL0zUBwBj2x8vlAAAAA==[0mxornet_qa" build number [8mha:AAAAlB+LCAAAAAAAAP9b85aBtbiIQSajNKU4P08vOT+vOD8nVc+jsiC1KCczL9svvyTVzHb1RttJBUeZGJg8GdhyUvPSSzJ8GJhLi3JKGIR8shLLEvVzEvPS9YNLijLz0q0rihik0IxzhtAgwxgggJGJgaGiAMhgLmEQ1s/KT9KvyC/KSy2JL0zUNzQx0gcARtMLHJgAAAA=[0m142
+[xornet_prod_stage] $ /bin/bash /tmp/hudson8948593365086070576.sh
+XDG_SESSION_ID=c1
+BUILD_URL=http://ec2-52-38-110-52.us-west-2.compute.amazonaws.com:8080/job/xornet_prod_stage/265/
+HUDSON_SERVER_COOKIE=f644632868a6f8c5
+SHELL=/bin/bash
+TERM=linux
+BUILD_TAG=jenkins-xornet_prod_stage-265
+GIT_PREVIOUS_COMMIT=f141118d7cc497f84e51ad5129507e0be5d41667
+WORKSPACE=/var/lib/jenkins/workspace/xornet_prod_stage
+JOB_URL=http://ec2-52-38-110-52.us-west-2.compute.amazonaws.com:8080/job/xornet_prod_stage/
+USER=jenkins
+GIT_COMMIT=f141118d7cc497f84e51ad5129507e0be5d41667
+JENKINS_HOME=/var/lib/jenkins
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+MAIL=/var/mail/jenkins
+_=/usr/bin/env
+PWD=/var/lib/jenkins/workspace/xornet_prod_stage
+HUDSON_URL=http://ec2-52-38-110-52.us-west-2.compute.amazonaws.com:8080/
+LANG=en_US.UTF-8
+COPYARTIFACT_BUILD_NUMBER_XORNET_QA=142
+JOB_NAME=xornet_prod_stage
+BUILD_DISPLAY_NAME=#265
+JENKINS_URL=http://ec2-52-38-110-52.us-west-2.compute.amazonaws.com:8080/
+BUILD_ID=265
+JOB_BASE_NAME=xornet_prod_stage
+GIT_PREVIOUS_SUCCESSFUL_COMMIT=f141118d7cc497f84e51ad5129507e0be5d41667
+XDG_SEAT=seat0
+HOME=/var/lib/jenkins
+SHLVL=2
+GIT_BRANCH=origin/master
+JENKINS_SERVER_COOKIE=f644632868a6f8c5
+EXECUTOR_NUMBER=1
+GIT_URL=https://github.com/harshad007/yamlfiles
+NODE_LABELS=master
+LOGNAME=jenkins
+HUDSON_HOME=/var/lib/jenkins
+NODE_NAME=master
+BUILD_NUMBER=265
+XDG_RUNTIME_DIR=/run/user/106
+HUDSON_COOKIE=a6da0f50-d91b-4f3e-b836-8ace5c316e7f
+One
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   261    0     2  100   259      8   1109 --:--:-- --:--:-- --:--:--  1111
+ok[PostBuildScript] - Execution post build scripts.
+[xornet_prod_stage] $ groovy /var/lib/jenkins/workspace/xornet_prod_stage/hudson3682534640008754370.groovy
+org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+/var/lib/jenkins/workspace/xornet_prod_stage/hudson3682534640008754370.groovy: 1: unexpected token:  @ line 1, column 200.
+   eZkaa9JVKx6leU].execute().text
+                                 ^
+
+1 error
+
+Build step 'Execute a set of scripts' changed build result to FAILURE
+Build step 'Execute a set of scripts' marked build as failure
+Finished: FAILURE

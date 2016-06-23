@@ -1,0 +1,64 @@
+Started by user [8mha:AAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyBEgZe/dLi1CL9jMSi4ozEFAAD9tttwgAAAA==[0mharshad velapure
+Building in workspace /var/lib/jenkins/workspace/project1
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/harshad007/yamlfiles # timeout=10
+Cleaning workspace
+ > git rev-parse --verify HEAD # timeout=10
+Resetting working tree
+ > git reset --hard # timeout=10
+ > git clean -fdx # timeout=10
+Fetching upstream changes from https://github.com/harshad007/yamlfiles
+ > git --version # timeout=10
+using .gitcredentials to set credentials
+ > git config --local credential.username harshad007 # timeout=10
+ > git config --local credential.helper store --file=/tmp/git1147231095044706788.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/harshad007/yamlfiles 209122226d0acc3555a0f4aecc5ebc4970aaeb69
+ > git config --local --remove-section credential # timeout=10
+Seen branch in repository origin/master
+Seen 1 remote branch
+Checking out Revision 209122226d0acc3555a0f4aecc5ebc4970aaeb69 (origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 209122226d0acc3555a0f4aecc5ebc4970aaeb69
+ > git rev-list 497f4721a58778abc26ac19fc9811a038ed8b1d2 # timeout=10
+[project1] $ /bin/sh -xe /tmp/hudson4993793593954680394.sh
++ env
+JENKINS_HOME=/var/lib/jenkins
+GIT_PREVIOUS_SUCCESSFUL_COMMIT=209122226d0acc3555a0f4aecc5ebc4970aaeb69
+MAIL=/var/mail/jenkins
+USER=jenkins
+SHLVL=1
+NODE_LABELS=master
+GIT_COMMIT=209122226d0acc3555a0f4aecc5ebc4970aaeb69
+HOME=/var/lib/jenkins
+JENKINS_SERVER_COOKIE=f644632868a6f8c5
+HUDSON_COOKIE=a465ac85-dbbe-4a28-8455-e5be87003896
+WORKSPACE=/var/lib/jenkins/workspace/project1
+LOGNAME=jenkins
+NODE_NAME=master
+_=/usr/bin/daemon
+EXECUTOR_NUMBER=0
+GIT_BRANCH=origin/master
+TERM=xterm
+XDG_SESSION_ID=1
+BUILD_DISPLAY_NAME=#52
+HUDSON_HOME=/var/lib/jenkins
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+BUILD_ID=52
+XDG_RUNTIME_DIR=/run/user/1000
+BUILD_TAG=jenkins-project1-52
+LANG=en_US.UTF-8
+GIT_URL=https://github.com/harshad007/yamlfiles
+BUILD_NUMBER=52
+SHELL=/bin/bash
+HUDSON_SERVER_COOKIE=f644632868a6f8c5
+JOB_NAME=project1
+PWD=/var/lib/jenkins/workspace/project1
+GIT_PREVIOUS_COMMIT=497f4721a58778abc26ac19fc9811a038ed8b1d2
++ echo
+
++ echo 209122226d0acc3555a0f4aecc5ebc4970aaeb69
+209122226d0acc3555a0f4aecc5ebc4970aaeb69
++ sh user.sh
+ubuntu   pts/1        2016-05-04 14:06 (115.114.9.131)
+Finished: SUCCESS

@@ -1,0 +1,73 @@
+Started by upstream project "[8mha:AAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgYu/az8JP2U1Nx8fQDFg2bivwAAAA==[0mdemo" build number [8mha:AAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAymEgYe/az8JP2U1Nx8fWMTALQmTqXBAAAA[0m34
+originally caused by:
+ Started by GitHub push by harshad007
+Building in workspace /var/lib/jenkins/workspace/project1
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/harshad007/yamlfiles # timeout=10
+Cleaning workspace
+ > git rev-parse --verify HEAD # timeout=10
+Resetting working tree
+ > git reset --hard # timeout=10
+ > git clean -fdx # timeout=10
+Fetching upstream changes from https://github.com/harshad007/yamlfiles
+ > git --version # timeout=10
+using .gitcredentials to set credentials
+ > git config --local credential.username harshad007 # timeout=10
+ > git config --local credential.helper store --file=/tmp/git5244493612245354468.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/harshad007/yamlfiles +refs/heads/*:refs/remotes/origin/*
+ > git config --local --remove-section credential # timeout=10
+Seen branch in repository origin/master
+Seen 1 remote branch
+Checking out Revision cb608930d7bc279d786584d22995b366b910ba3f (origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f cb608930d7bc279d786584d22995b366b910ba3f
+ > git rev-list 5d0404094699d922250036f2e9765b445cbca2f5 # timeout=10
+[project1] $ /bin/sh -xe /tmp/hudson4993743120079121281.sh
++ env
+JENKINS_HOME=/var/lib/jenkins
+GIT_PREVIOUS_SUCCESSFUL_COMMIT=97b625c72d248e167a47eec625ac7e2e18e73e41
+MAIL=/var/mail/jenkins
+USER=jenkins
+XDG_SEAT=seat0
+SHLVL=1
+NODE_LABELS=master
+HUDSON_URL=http://ec2-52-38-110-52.us-west-2.compute.amazonaws.com:8080/
+GIT_COMMIT=cb608930d7bc279d786584d22995b366b910ba3f
+HOME=/var/lib/jenkins
+BUILD_URL=http://ec2-52-38-110-52.us-west-2.compute.amazonaws.com:8080/job/project1/114/
+JENKINS_SERVER_COOKIE=f644632868a6f8c5
+HUDSON_COOKIE=96da785a-d078-4191-8ab1-7e161649ce95
+WORKSPACE=/var/lib/jenkins/workspace/project1
+LOGNAME=jenkins
+NODE_NAME=master
+_=/usr/bin/daemon
+EXECUTOR_NUMBER=1
+GIT_BRANCH=origin/master
+TERM=linux
+XDG_SESSION_ID=c1
+BUILD_DISPLAY_NAME=#114
+HUDSON_HOME=/var/lib/jenkins
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+BUILD_ID=114
+XDG_RUNTIME_DIR=/run/user/106
+BUILD_TAG=jenkins-project1-114
+JENKINS_URL=http://ec2-52-38-110-52.us-west-2.compute.amazonaws.com:8080/
+LANG=en_US.UTF-8
+JOB_URL=http://ec2-52-38-110-52.us-west-2.compute.amazonaws.com:8080/job/project1/
+GIT_URL=https://github.com/harshad007/yamlfiles
+BUILD_NUMBER=114
+SHELL=/bin/bash
+HUDSON_SERVER_COOKIE=f644632868a6f8c5
+JOB_NAME=project1
+PWD=/var/lib/jenkins/workspace/project1
+Temp=5d0404094699d922250036f2e9765b445cbca2f5
+GIT_PREVIOUS_COMMIT=5d0404094699d922250036f2e9765b445cbca2f5
++ echo 5d0404094699d922250036f2e9765b445cbca2f5
+5d0404094699d922250036f2e9765b445cbca2f5
++ echo 97b625c72d248e167a47eec625ac7e2e18e73e41
+97b625c72d248e167a47eec625ac7e2e18e73e41
++ sh user.sh
+ubuntu   pts/0        2016-05-05 07:14 (115.114.9.131)
+Archiving artifacts
+Finished: SUCCESS

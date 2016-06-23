@@ -1,0 +1,64 @@
+Started by GitHub push by harshad007
+Building in workspace /var/lib/jenkins/workspace/demo
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/harshad007/yamlfiles # timeout=10
+Fetching upstream changes from https://github.com/harshad007/yamlfiles
+ > git --version # timeout=10
+using .gitcredentials to set credentials
+ > git config --local credential.username harshad007 # timeout=10
+ > git config --local credential.helper store --file=/tmp/git1504272663868978990.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/harshad007/yamlfiles +refs/heads/master:refs/remotes/origin/master
+ > git config --local --remove-section credential # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision c336b73a68d08f6138a2c53329afda20e118d5ea (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f c336b73a68d08f6138a2c53329afda20e118d5ea
+ > git rev-list 263962416cacaaa90e848f5f13b78cfdaa99f1ed # timeout=10
+[demo] $ /bin/sh -xe /tmp/hudson1871237000378842175.sh
++ env
+JENKINS_HOME=/var/lib/jenkins
+GIT_PREVIOUS_SUCCESSFUL_COMMIT=263962416cacaaa90e848f5f13b78cfdaa99f1ed
+MAIL=/var/mail/jenkins
+USER=jenkins
+XDG_SEAT=seat0
+SHLVL=1
+NODE_LABELS=master
+HUDSON_URL=http://ec2-52-38-110-52.us-west-2.compute.amazonaws.com:8080/
+GIT_COMMIT=c336b73a68d08f6138a2c53329afda20e118d5ea
+HOME=/var/lib/jenkins
+BUILD_URL=http://ec2-52-38-110-52.us-west-2.compute.amazonaws.com:8080/job/demo/31/
+JENKINS_SERVER_COOKIE=f644632868a6f8c5
+HUDSON_COOKIE=ed0e8504-7138-4959-9197-d09d77177002
+WORKSPACE=/var/lib/jenkins/workspace/demo
+LOGNAME=jenkins
+NODE_NAME=master
+_=/usr/bin/daemon
+EXECUTOR_NUMBER=1
+GIT_BRANCH=origin/master
+TERM=linux
+XDG_SESSION_ID=c1
+BUILD_DISPLAY_NAME=#31
+HUDSON_HOME=/var/lib/jenkins
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+BUILD_ID=31
+XDG_RUNTIME_DIR=/run/user/106
+BUILD_TAG=jenkins-demo-31
+JENKINS_URL=http://ec2-52-38-110-52.us-west-2.compute.amazonaws.com:8080/
+LANG=en_US.UTF-8
+JOB_URL=http://ec2-52-38-110-52.us-west-2.compute.amazonaws.com:8080/job/demo/
+GIT_URL=https://github.com/harshad007/yamlfiles
+BUILD_NUMBER=31
+SHELL=/bin/bash
+HUDSON_SERVER_COOKIE=f644632868a6f8c5
+JOB_NAME=demo
+PWD=/var/lib/jenkins/workspace/demo
+GIT_PREVIOUS_COMMIT=263962416cacaaa90e848f5f13b78cfdaa99f1ed
++ echo
+
++ echo 263962416cacaaa90e848f5f13b78cfdaa99f1ed
+263962416cacaaa90e848f5f13b78cfdaa99f1ed
+Warning: you have no plugins providing access control for builds, so falling back to legacy behavior of permitting any downstream builds to be triggered
+Triggering a new build of [8mha:AAAAmh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyOEgY+/az8JP2Covys1OQSQ30AWn4mLcMAAAA=[0mproject1
+Finished: SUCCESS
